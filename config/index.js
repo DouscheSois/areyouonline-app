@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const config = require("config");
+import mongoose from "mongoose";
+import config from "config";
 
 const mongoDatabase = config.get("MongoURI");
 
@@ -11,11 +11,11 @@ const mongoConnection = async () => {
       useCreateIndex: true,
       useFindAndModify: false,
     });
-    console.log("MongoDB is connected..!");
+    console.log("MongoDB is connected..success!");
   } catch (err) {
     console.error(err.message);
     process.exit(1);
   }
 };
 
-module.exports = mongoConnection;
+export default mongoConnection;
