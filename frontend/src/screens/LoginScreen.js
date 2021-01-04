@@ -1,41 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Row, Col, Form, Button } from "react-bootstrap";
+import { Col, Row, Form, Button } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
 
-const RegisterScreen = () => {
+const LoginScreen = () => {
   return (
     <FormContainer>
-      <h1>Sign Up</h1>
+      <h1>Welcome Back!</h1>
       <Form>
-        <Form.Group controlId="name">
-          <Form.Control type="name" placeholder="Enter name" />
-        </Form.Group>
-
         <Form.Group controlId="email">
+          <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
         </Form.Group>
 
         <Form.Group controlId="password">
+          <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Enter password" />
         </Form.Group>
 
-        <Form.Group controlId="confirmPassword">
-          <Form.Control type="password" placeholder="Confirm password" />
-        </Form.Group>
         <Button variant="primary" type="submit">
-          Register
+          Login
         </Button>
       </Form>
-
       <Row className="py-3">
         <Col>
-          Have have an account?
-          <Link to="/login"> Register</Link>
+          Need have an account?
+          <Link to="/register"> Register</Link>
         </Col>
       </Row>
     </FormContainer>
   );
 };
 
-export default RegisterScreen;
+export default LoginScreen;
